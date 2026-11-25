@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f8f9fa;
+  --ink: #111827;
+  --line: #e5e7eb;
+  --muted: #6b7280;
+  --low: #4d7c0f;
+  --mid: #d97706;
+  --high: #b91c1c;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.font-mono-data {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Controls del mapa: estil editorial, sense ombres difuses */
+.maplibregl-ctrl-group {
+  border: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: var(--paper) !important;
+}
+
+.maplibregl-ctrl-group button + button {
+  border-top: 1px solid var(--line) !important;
+}
+
+.maplibregl-ctrl-attrib {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+}
