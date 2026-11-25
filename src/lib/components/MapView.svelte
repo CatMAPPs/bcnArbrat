@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
+  import { base } from '$app/paths';
   import { Map, Config } from 'mapicgc-gl-js';
   import '../../../node_modules/mapicgc-gl-js/dist/mapicgc-gl.css';
   import { app } from '$lib/state/app.svelte';
@@ -225,7 +226,7 @@
     });
 
     map.on('load', async () => {
-      const res = await fetch('/data/arbrat_bcn.geojson');
+      const res = await fetch(`${base}/data/arbrat_bcn.geojson`);
       allData = (await res.json()) as FeatureCollection;
 
       const barris = Array.from(
